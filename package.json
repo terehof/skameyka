@@ -1,9 +1,9 @@
 {
-  "name": "bond-ny",
+  "name": "skameyka",
   "version": "1.0.0",
   "description": "",
   "author": "terehof",
-  "license": "free",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.1",
     "gulp-autoprefixer": "*",
