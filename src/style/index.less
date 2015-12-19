@@ -1,11 +1,34 @@
-
+@import (less) "normalize.css";
 html {
     background: @white;
+    height: 100%;
+    font-size: 10px;
 }
-h1 {
-    color: @white;
-    font-size: 30px;
-    margin-top: 500px;
-    transition: all 0.25s ease;
+body {
+    height: 100%;
+}
+.main-wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: 5rem;
+}
+footer {
+    margin-top: -5rem;
+}
 
+.container {
+    max-width: 96rem;
+}
+
+
+
+.header__nav {
+    ul {
+        margin: 0;
+        li {
+            a {
+                .fsize(13);
+            }
+        }
+    }
 }

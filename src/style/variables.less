@@ -1,2 +1,19 @@
+.setBg(@url, @bgSize: 100%, @bgRepeat: no-repeat) {
+  width: unit(image-width(@url)) * 0.1rem;
+  height: unit(image-height(@url)) * 0.1rem;
+  background-image: url(@url);
+  background-size: @bgSize;
+  background-repeat: no-repeat;
+}
+
+@baseFont: 10;
+.fsize(@sizeValue: @baseFont, @content: @baseFont) {
+  @remValue: @sizeValue/10;
+  font-size: ~"@{remValue}rem";
+}
+
 /*colors*/
 @white: #fff;
+
+
+

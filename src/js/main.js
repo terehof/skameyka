@@ -1,5 +1,5 @@
 var app = app || {};
-app.main = {
+app.events = {
     init: function() {
         this.events();
     },
@@ -9,7 +9,7 @@ app.main = {
 };
 var App = (function($, app){
     function init () {
-        app.main.init();
+        app.events.init();
     }
     return {
         init: init
