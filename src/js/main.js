@@ -1,10 +1,13 @@
 var app = app || {};
 app.events = {
     init: function() {
-        this.events();
+        this.projectsItems();
     },
-    events: function () {
-        console.log('test');
+    projectsItems: function () {
+        var $item = $('.project-item');
+        if ($item.length > 0) {
+            $item.css('height', $item.width());
+        }
     }
 };
 var App = (function($, app){
@@ -17,4 +20,8 @@ var App = (function($, app){
 })(jQuery, app);
 $(function () {
     App.init();
+});
+
+$(window).resize(function () {
+    app.events.projectsItems();
 });
