@@ -3,6 +3,7 @@ app.events = {
     init: function() {
         this.projectsItems();
         this.projectDescrip();
+        this.slider();
     },
     projectsItems: function () {
         var $item = $('.project-item');
@@ -18,6 +19,17 @@ app.events = {
                 limit: function () {
                     return $('footer').offset().top - $(this).height();
                 }
+            });
+        }
+    },
+    slider: function() {
+        var $slider = $('.index-slider');
+        if ($slider.length > 0) {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                prevText: '',
+                nextText: ''
             });
         }
     }
