@@ -20,7 +20,8 @@
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
     "opn": "*",
-    "rimraf": "*"
+    "rimraf": "*",
+    "connect-history-api-fallback": "*"
   },
   "dependencies": {
     "browser-sync": "^2.9.3",
