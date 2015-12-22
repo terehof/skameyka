@@ -41,7 +41,7 @@
             </div>
             <div class="contacts-content__right">
                 <div class="contacts__form">
-                    <form action="#">
+                    <form action="#" class="contacts-form">
                         <p class="form-title">напишите нам</p>
                         <div class="input-wrap">
                             <textarea name="message" cols="20" rows="5" class="textarea" placeholder="Текст сообщения"></textarea>
@@ -56,12 +56,14 @@
                             <input type="email" class="input" name="email" placeholder="Электронная почта">
                         </div>
                         <div class="input-wrap input-wrap--small-right">
-                            <button class="btn-send">Отправить сообщение</button>
+                            <button class="btn-form btn-send">Отправить сообщение</button>
+                            <img src="images/decor/preloader.GIF" alt="" class="preloader">
+                            <p class="message success">Ваше сообщение отправлено!</p>
+                            <p class="message error">Произошла ошибка.</p>
                         </div>
                     </form>
                 </div>
             </div>
-
 
         </div>
     </div>
@@ -100,6 +102,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/lightbox.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
