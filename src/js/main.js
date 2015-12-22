@@ -6,11 +6,13 @@ app.events = {
         this.slider();
         this.lightbox();
         this.blogImages();
+        this.mobileMenu();
     },
     projectsItems: function () {
         var $item = $('.project-item');
         if ($item.length > 0) {
             $item.css('height', $item.width());
+            $item.find('.project-item__preview').css('width', $item.width());
         }
     },
     projectDescrip: function () {
@@ -29,16 +31,27 @@ app.events = {
         if ($slider.length > 0) {
             $('.flexslider').flexslider({
                 animation: "slide",
+                slideshow: false,
                 controlNav: false,
                 prevText: '<',
                 nextText: '>',
+                start: function () {
+                    var firstTitle = $slider.find('.flex-active-slide').attr('data-slide-title'),
+                        $line = $('.slider-line > span');
+                    $line.html(firstTitle);
+                },
                 before: function () {
-                    $('.flex-caption').fadeOut(200);
-                    $('.flex-direction-nav').fadeOut(100);
+                    var $activeSlide = $('.flex-active-slide'),
+                        $nextSlide = $activeSlide.next(),
+                        title = $nextSlide.attr('data-slide-title');
+                    $('.slider-line > span').css('opacity', 0);
                 },
                 after: function () {
-                    $('.flex-caption').fadeIn(200);
-                    $('.flex-direction-nav').fadeIn(200);
+                    var $activeSlide = $('.flex-active-slide'),
+                        title = $activeSlide.attr('data-slide-title');
+                    $('.slider-line > span').remove();
+                    $('.slider-line').append('<span class="new" style="opacity: 0;">'+title+'</span>');
+                    $('.slider-line > .new').css('opacity', 1);
                 }
             });
         }
@@ -55,6 +68,13 @@ app.events = {
         if ($image.length>0) {
             $image.css('height', $image.width()*0.68);
         }
+    },
+    mobileMenu: function () {
+        var $menuBtn = $('.menu-toggle');
+        $menuBtn.on('click', function () {
+            $(this).toggleClass('active');
+            $('.header__nav').toggleClass('active');
+        });
     }
 };
 var App = (function($, app){
