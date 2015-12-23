@@ -378,28 +378,30 @@ h2 {
 }
 
 .projects-wrap {
-
+    position: relative;
+    overflow: hidden;
+    width: 102%;
+    margin-left: -0.45%;
+    text-align: justify;
 }
 .project-item {
     display: inline-block;
     position: relative;
-    width: 15.9%;
+    vertical-align: top;
+    width: 15.7%;
     float: left;
-    margin-left: 0.92%;
-    margin-bottom: 0.92%;
+    margin: 0 0.45% 0.92%;
     background: @project-tile-bg;
     overflow: hidden;
-    transition: all 0.3s linear;
+    //transition: all 0.3s linear;
+    transform-style: preserve-3d;
+    &.mix {
+        display: none;
+    }
     &:hover {
         .project-item__preview {
             opacity: 1;
         }
-    }
-    &:first-child {
-        margin-left: 0;
-    }
-    &:nth-child(6n+1) {
-        margin-left: 0;
     }
 }
 .project-item__icon {
@@ -689,9 +691,10 @@ html[xmlns] .flexslider .slides {
     margin: 0;
     right: 0;
     top: 4rem;
+    font-weight: 400;
     background: fade(@slider-line, 60%);
     color: @slider-title;
-    .fsize(20);
+    .fsize(21);
     text-transform: uppercase;
     line-height: 1;
     transition: all 0.4s ease;
@@ -1214,20 +1217,13 @@ label.error {
         width: 100%;
         float: none;
     }
+    .project-wrap {
+        width: 102%;
+        margin-left: -1%;
+    }
     .project-item {
-        width: 24.2%;
-        margin-left: 1% !important;
-        margin-bottom: 1%;
-
-        &:nth-child(6n+1) {
-            margin-left: 0;
-        }
-        &:nth-child(4n+1) {
-            margin-left: 0 !important;
-        }
-        &:first-child {
-            margin-left: 0 !important;
-        }
+        width: 22.55%;
+        margin: 0 1% 1%;
     }
     .project-left {
         display: block;
@@ -1285,22 +1281,13 @@ label.error {
     }
 }
 @media (max-width: 420px) {
+    .projects-wrap {
+        width: 103%;
+        margin-left: -2%;
+    }
     .project-item {
-        width: 49%;
-        margin-left: 2% !important;
-        margin-bottom: 2%;
-        &:first-child {
-            margin-left: 0;
-        }
-        &:nth-child(6n+1) {
-            margin-left: 0;
-        }
-        &:nth-child(4n+1) {
-            margin-left: 0% !important;
-        }
-        &:nth-child(2n+1) {
-            margin-left: 0 !important;
-        }
+        width: 46%;
+        margin: 0 2% 4%;
     }
     .input-wrap {
         &.input-wrap--small-left {

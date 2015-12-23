@@ -22,6 +22,7 @@ app.events = {
         this.blogImages();
         this.mobileMenu();
         this.projectCategoriesMenu();
+        this.projectsFilters();
         this.formValidate();
     },
     projectsItems: function () {
@@ -101,6 +102,9 @@ app.events = {
             $('.toggle-categories').toggleClass('active');
             $('.toggle-categories-menu').toggleClass('active');
         })
+    },
+    projectsFilters: function () {
+
     },
     formValidate: function () {
         $('input[name="phone"]').mask("+7 (999) 999-9999");
@@ -208,4 +212,12 @@ $(window).load(function () {
 
         })
     }
+    $('.project-item').addClass('mix');
+    $('.projects-wrap').mixItUp({
+        animation: {
+            duration: 400,
+            effects: 'fade',
+            easing: 'ease'
+        }
+    });
 });
