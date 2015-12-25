@@ -19,11 +19,12 @@ app.events = {
         this.projectDescrip();
         this.slider();
         this.lightbox();
+        this.disableProjectsLightbox();
         this.blogImages();
         this.mobileMenu();
         this.projectCategoriesMenu();
-        this.projectsFilters();
         this.formValidate();
+        this.swipe();
     },
     projectsItems: function () {
         var $item = $('.project-item');
@@ -82,6 +83,16 @@ app.events = {
             wrapAround: true
         })
     },
+    disableProjectsLightbox: function () {
+        if ($(window).width() < 640) {
+            var $projWrap = $('.project-wrap');
+            if ($projWrap.length > 0) {
+                $('.project-image').each(function (item, i) {
+                    $(this).removeAttr('data-lightbox').attr('onclick', 'return false;');
+                });
+            }
+        }
+    },
     blogImages: function() {
         var $image = $('.image-small');
         if ($image.length>0) {
@@ -102,9 +113,6 @@ app.events = {
             $('.toggle-categories').toggleClass('active');
             $('.toggle-categories-menu').toggleClass('active');
         })
-    },
-    projectsFilters: function () {
-
     },
     formValidate: function () {
         $('input[name="phone"]').mask("+7 (999) 999-9999");
@@ -173,6 +181,21 @@ app.events = {
                  })*/
             }
         });
+    },
+    swipe: function () {
+        if ($('.blog-wrapper').length > 0) {
+            var hammertime = new Hammer( document.getElementById('lightboxOverlay'));
+            hammertime.on('swipe', function(ev) {
+                console.log(ev);
+                console.log(ev.direction);
+                if (ev.direction == 2) {
+                    $('.lb-next').click();
+                }
+                if (ev.direction == 4) {
+                    $('.lb-prev').click();
+                }
+            });
+        }
     }
 };
 var App = (function($, app){

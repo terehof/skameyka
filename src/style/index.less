@@ -114,6 +114,17 @@ footer {
 .footer__contacts {
     display: inline-block;
 }
+.footer__made-by {
+    display: inline-block;
+    margin: 0;
+    float: right;
+    a {
+        color: @dark;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
 .foot-contacts {
     .link-email {
         color: @dark;
@@ -479,6 +490,15 @@ h2 {
         margin: 0;
     }
 }
+.project-share {
+    .fsize(14);
+}
+.project-share_link {
+    color: @dark;
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 .index-slider {
     position: relative;
@@ -512,6 +532,12 @@ h2 {
     transition: all 0.2s ease;
     display: none;
     -webkit-backface-visibility: hidden;
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
 }
 .flexslider .slides img {
     width: 100%;
@@ -988,7 +1014,7 @@ body.lb-disable-scrolling {
     z-index: 101;
     transition: padding 0.3s linear;
     &.active {
-        position: fixed;
+        position: absolute;
         padding-top: 7px;
         i {
             background: @white;
@@ -1134,6 +1160,14 @@ label.error {
     }
 
 }
+@media (max-width: 800px) {
+    .footer__made-by {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: 1rem 0 0;
+    }
+}
 @media (max-width: 768px) {
     .about-content__left {
         display: block;
@@ -1145,6 +1179,15 @@ label.error {
         width: 100%;
         float: none;
     }
+    .footer__contacts {
+        display: block;
+        margin-top: 0.5rem;
+    }
+    footer {
+        text-align: center;
+    }
+
+
 }
 @media (max-width: 640px) {
     .menu-toggle {
@@ -1189,10 +1232,7 @@ label.error {
             }
         }
     }
-    .footer__contacts {
-        display: block;
-        margin-top: 0.5rem;
-    }
+
     .about-content__section {
         margin: 0 0 2.5rem;
     }
@@ -1217,7 +1257,7 @@ label.error {
         width: 100%;
         float: none;
     }
-    .project-wrap {
+    .projects-wrap {
         width: 102%;
         margin-left: -1%;
     }
@@ -1243,6 +1283,14 @@ label.error {
     }
     .toggle-categories-btn {
         display: none;
+    }
+    .flexslider .slides > li {
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: block;
+        }
     }
 }
 @media (max-width: 480px) {
@@ -1278,6 +1326,18 @@ label.error {
     }
     .crewman__image {
         width: 8rem;
+    }
+    .footer__made-by {
+        margin: 1.7rem 0 0;
+    }
+    .projects-filter {
+        i {
+            display: block;
+        }
+    }
+    .filter-item {
+        margin-right: 0;
+        .fsize(15);
     }
 }
 @media (max-width: 420px) {
