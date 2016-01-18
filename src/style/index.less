@@ -355,13 +355,15 @@ h2 {
 }
 
 .projects-filter {
-
+    margin-top: -5rem;
 }
 .filter-item {
     position: relative;
     display: inline-block;
     color: @dark;
+    text-transform: uppercase;
     .fsize(13);
+    font-weight: 700;
     margin: 0 2.3rem 1.1rem 0;
     text-decoration: none;
     &:after {
@@ -393,6 +395,7 @@ h2 {
     overflow: hidden;
     width: 102%;
     margin-left: -0.45%;
+    margin-top: 2.2rem;
     text-align: justify;
 }
 .project-item {
@@ -507,6 +510,9 @@ h2 {
         .slider-line {
             bottom: 0;
         }
+        .flex-direction-nav a {
+            opacity: 1;
+        }
     }
 }
 /* begin slider */
@@ -608,28 +614,28 @@ html[xmlns] .flexslider .slides {
 .flex-direction-nav a {
     text-decoration: none;
     display: block;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4rem;
     position: absolute;
-    top: 5.7rem;
+    top: 0;
+    height: 100%;
     line-height: 2.5rem;
     text-align: center;
     .fsize(20);
     z-index: 10;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     color: @slider-arrow;
-    transition: all 0.25s ease;
+    transition: all 0.7s ease;
     &:hover {
         color: @slider-arrow-hover;
     }
 }
 .flex-direction-nav .flex-prev {
-    right: 3rem;
+    left: 0;
 }
 .flex-direction-nav .flex-next {
-    right: 0.2rem;
+    right: 0;
 }
 .flex-direction-nav .flex-disabled {
     opacity: 0!important;
@@ -729,7 +735,7 @@ html[xmlns] .flexslider .slides {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
-    padding: 1.9rem 9.8rem 1.6rem 2.3rem;
+    padding: 1.9rem 2.3rem 1.6rem 2.3rem;
     margin: 0;
     right: 0;
     bottom: -5rem;
