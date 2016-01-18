@@ -51,7 +51,8 @@ app.events = {
         if ($slider.length > 0) {
             $('.flexslider').flexslider({
                 animation: "slide",
-                slideshow: false,
+                slideshow: false,  /*todo: поставить true*/
+                slideshowSpeed: 3500,
                 controlNav: false,
                 prevText: '<',
                 nextText: '>',

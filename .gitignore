@@ -1,5 +1,6 @@
 .idea/
 FILES
+files
 /bower_components
 /node_modules
 /build

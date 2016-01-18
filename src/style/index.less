@@ -6,7 +6,7 @@ html {
 }
 body {
     height: 100%;
-    font-family: 'PTSans';
+    font-family: 'tt_prosto_sans', 'PTSans', Arial;
     font-weight: 400;
     color: @dark;
     .fsize(14);
@@ -35,7 +35,7 @@ body {
 }
 .header {
     border-bottom: 1px solid @header-line;
-    padding: 2.5rem 0 1.5rem;
+    padding: 5.5rem 0 1.5rem;
 }
 .header__logo {
     display: inline-block;
@@ -162,7 +162,7 @@ footer {
     }
 }
 .main-content {
-    padding: 3.2rem 0 0;
+    padding: 8rem 0 0;
     .container {
 
     }
@@ -502,7 +502,12 @@ h2 {
 
 .index-slider {
     position: relative;
-    margin-top: -1.3rem;
+    overflow: hidden;
+    &:hover {
+        .slider-line {
+            bottom: 0;
+        }
+    }
 }
 /* begin slider */
 .flex-container a:hover,
@@ -532,8 +537,17 @@ h2 {
     transition: all 0.2s ease;
     display: none;
     -webkit-backface-visibility: hidden;
+    a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        img {
+            width: 100%;
+        }
+    }
     .desktop {
         display: block;
+        height: 43rem;
     }
     .mobile {
         display: none;
@@ -712,18 +726,20 @@ html[xmlns] .flexslider .slides {
 
 .flex-caption, .slider-line {
     position: absolute;
-    width: auto;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
     padding: 1.9rem 9.8rem 1.6rem 2.3rem;
     margin: 0;
     right: 0;
-    top: 4rem;
+    bottom: -5rem;
     font-weight: 400;
-    background: fade(@slider-line, 60%);
+    background: fade(@slider-line, 80%);
     color: @slider-title;
-    .fsize(21);
+    .fsize(15);
     text-transform: uppercase;
     line-height: 1;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
     span {
         display: inline-block;
         transition: all 0.4s ease;
