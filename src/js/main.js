@@ -54,8 +54,8 @@ app.events = {
                 slideshow: true,
                 slideshowSpeed: 3500,
                 controlNav: false,
-                prevText: '<',
-                nextText: '>',
+                prevText: '',
+                nextText: '',
                 start: function () {
                     var firstTitle = $slider.find('.flex-active-slide').attr('data-slide-title'),
                         $line = $('.slider-line > span');
@@ -187,8 +187,6 @@ app.events = {
         if ($('.blog-wrapper').length > 0) {
             var hammertime = new Hammer( document.getElementById('lightboxOverlay'));
             hammertime.on('swipe', function(ev) {
-                console.log(ev);
-                console.log(ev.direction);
                 if (ev.direction == 2) {
                     $('.lb-next').click();
                 }
@@ -227,7 +225,6 @@ $(window).load(function () {
     if ($image.length>0) {
         $image.each(function (i, item) {
             var $innerImg = $(item).find('img');
-            console.log($innerImg.height());
             if ($innerImg.width() > $innerImg.height()) {
                 $innerImg.addClass('horiz');
             } else {

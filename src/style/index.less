@@ -642,6 +642,7 @@ h2 {
         }
         .flex-direction-nav a {
             opacity: 1;
+            transition: all 1.5s ease;
         }
     }
 }
@@ -756,13 +757,23 @@ html[xmlns] .flexslider .slides {
     opacity: 0;
     cursor: pointer;
     color: @slider-arrow;
-    transition: all 0.7s ease;
+    background-image: url(../images/decor/slider-arrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    transition: all 0.5s ease;
     &:hover {
         color: @slider-arrow-hover;
     }
 }
 .flex-direction-nav .flex-prev {
     left: 0;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 .flex-direction-nav .flex-next {
     right: 0;
@@ -1060,14 +1071,21 @@ body.lb-disable-scrolling {
     width: 12%;
     left: 0;
     float: left;
-    background: url(../images/decor/prev.png) left 48% no-repeat;
+    background: url(../images/decor/arrow.svg) left 48% no-repeat;
     background-position: 50% 50%;
+    background-size: 3rem;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 1;
     -webkit-transition: opacity 0.6s;
     -moz-transition: opacity 0.6s;
     -o-transition: opacity 0.6s;
     transition: opacity 0.6s;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 .lb-nav a.lb-prev:hover {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -1079,8 +1097,9 @@ body.lb-disable-scrolling {
     width: 12%;
     right: 0;
     float: right;
-    background: url(../images/decor/next.png) right 48% no-repeat;
+    background: url(../images/decor/arrow.svg) right 48% no-repeat;
     background-position: 50% 50%;
+    background-size: 3rem;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 1;
     -webkit-transition: opacity 0.6s;
@@ -1141,11 +1160,11 @@ body.lb-disable-scrolling {
     float: right;
     width: 17px;
     height: 17px;
-    background: url(../images/decor/close.png) top right no-repeat;
+    background: url(../images/decor/cross.svg) top right no-repeat;
+    background-size: 100%;
     text-align: right;
     outline: none;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-    opacity: 0.7;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     -o-transition: opacity 0.2s;
