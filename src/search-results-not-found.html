@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title>Contacts - Skameyka</title>
+    <title>Search results (not found) - Skameyka</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                     <li><a href="projects.html">Проекты</a></li>
                     <li><a href="about.html">О нас</a></li>
                     <li><a href="blog.html">Блог</a></li>
-                    <li class="active"><a href="contacts.html">Контакты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
             <div class="header__search">
@@ -45,53 +45,41 @@
 
     <div class="main-content">
         <div class="container clearfix">
-            <h1>контактная информация</h1>
 
-            <div class="contacts-content__left">
+            <div class="search-not-found">
+                <p class="title">Поиск не дал результатов</p>
                 <p>
-                    Проектная мастерская SKAMEYKA
+                    Извините, но по вашему запросу ничего не найдено.
+                    <br>
+                    Вы можете посмотреть наши разделы:
                 </p>
-                <p>
-                    ул. Днепровская, 27, г.Владивосток
-                </p>
-                <p>
-                    <a href="tel:+74232698762" class="contacts__phone">+7 (423) 269-87-62</a>
-                </p>
-                <p>
-                    <a href="mailto:hi@skameykaarchitects.com" class="contacts__email">hi@skameykaarchitects.com</a>
-                </p>
-
-                <!--<span class="contacts__label">телефон</span>-->
-                <!--<a href="tel:+74232698762" class="contacts__phone">+7 (423) 269-87-62</a>-->
-                <!--<span class="contacts__label">электронная почта</span>-->
-                <!--<a href="mailto:hi@skameykaarchitects.com" class="contacts__email">hi@skameykaarchitects.com</a>-->
-                <!--<span class="contacts__label">скайп</span>-->
-                <!--<a href="skype:skameykaarchitects" class="contacts__skype">skameykaarchitects</a>-->
-            </div>
-            <div class="contacts-content__right">
-                <div class="contacts__form">
-                    <form action="#" class="contacts-form">
-                        <p class="form-title">напишите нам</p>
-                        <div class="input-wrap">
-                            <textarea name="message" cols="20" rows="6" class="textarea" placeholder="Текст сообщения"></textarea>
-                        </div>
-                        <div class="input-wrap input-wrap--small-left">
-                            <input type="text" class="input" name="name" placeholder="Ваше имя">
-                        </div>
-                        <div class="input-wrap input-wrap--small-right">
-                            <input type="tel" class="input" name="phone" placeholder="Номер телефона">
-                        </div>
-                        <div class="input-wrap input-wrap--small-left">
-                            <input type="email" class="input" name="email" placeholder="Электронная почта">
-                        </div>
-                        <div class="input-wrap input-wrap--small-right">
-                            <button class="btn-form btn-send">Отправить сообщение</button>
-                            <img src="images/decor/preloader.GIF" alt="" class="preloader">
-                            <p class="message success">Ваше сообщение отправлено!</p>
-                            <p class="message error">Произошла ошибка.</p>
-                        </div>
-                    </form>
-                </div>
+                <ul>
+                    <li>
+                        <a href="#">Проекты</a>
+                        <ul>
+                            <li><a href="#">Градостроительство</a></li>
+                            <li><a href="#">Общественные здания</a></li>
+                            <li><a href="#">Жилье</a></li>
+                            <li><a href="#">Интерьеры</a></li>
+                            <li><a href="#">Мебель и предметы</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                        <ul>
+                            <li><a href="#">Наша цель</a></li>
+                            <li><a href="#">Команда</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Блог</a></li>
+                    <li>
+                        <a href="#">Контакты</a>
+                        <ul>
+                            <li><a href="#">Контактная информация</a></li>
+                            <li><a href="#">Напишите нам</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -133,8 +121,9 @@
 
 
 <script src="js/jquery.min.js"></script>
-<script src="js/lightbox.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/lightbox.min.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
 <script src="js/hammer.min.js"></script>
 <script src="js/main.js"></script>

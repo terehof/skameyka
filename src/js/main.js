@@ -35,9 +35,9 @@ app.events = {
     },
     projectDescrip: function () {
         if ($(window).width() > 640) {
-            var $projDescrip = $('.project-descrip');
-            if ($projDescrip.length > 0) {
-                $projDescrip.scrollToFixed({
+            var $projLeft = $('.project-left');
+            if ($projLeft.length > 0) {
+                $projLeft.scrollToFixed({
                     marginTop: 5,
                     limit: function () {
                         return $('footer').offset().top - $(this).height();
