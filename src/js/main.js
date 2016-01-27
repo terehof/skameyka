@@ -19,6 +19,7 @@ app.events = {
         this.projectDescrip();
         this.slider();
         this.lightbox();
+        this.fixedHeader();
         this.disableProjectsLightbox();
         this.blogImages();
         this.mobileMenu();
@@ -38,7 +39,7 @@ app.events = {
             var $projLeft = $('.project-left');
             if ($projLeft.length > 0) {
                 $projLeft.scrollToFixed({
-                    marginTop: 5,
+                    marginTop: 130,
                     limit: function () {
                         return $('footer').offset().top - $(this).height();
                     }
@@ -114,6 +115,13 @@ app.events = {
             $('.toggle-categories').toggleClass('active');
             $('.toggle-categories-menu').toggleClass('active');
         })
+    },
+    fixedHeader: function () {
+        if ($(window).width() > 640) {
+            $('.header').scrollToFixed({
+                marginTop: 0
+            });
+        }
     },
     formValidate: function () {
         $('input[name="phone"]').mask("+7 (999) 999-9999");
