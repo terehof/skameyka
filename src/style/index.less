@@ -14,7 +14,7 @@ body {
 .main-wrapper {
     box-sizing: border-box;
     min-height: 100%;
-    padding-bottom: 5.5rem;
+    padding-bottom: 14rem;
     min-width: 320px;
     overflow: hidden;
 }
@@ -36,14 +36,14 @@ body {
 }
 header {
     background: @white;
-    min-height: 11rem;
+    min-height: 8rem;
 }
 .header {
     position: relative;
     z-index: 1001 !important;
     background: @white;
     border-bottom: 1px solid @header-line;
-    padding: 5.5rem 0 1.5rem;
+    padding: 2.5rem 0 1.5rem;
     &:before {
         content: '';
         position: absolute;
@@ -78,7 +78,7 @@ header {
     float: left;
     margin: 0 0 0 4%;
     font-weight: 400;
-    padding: 2.2rem 0 0;
+    padding: 2rem 0 0;
     ul {
         margin: 0;
         padding: 0;
@@ -179,7 +179,7 @@ header {
 .search__label {
     display: inline-block;
     vertical-align: top;
-    margin: 0 0 0 -2rem;
+    margin: 0 0 0 -1.3rem;
 }
 
 footer {
@@ -191,7 +191,7 @@ footer {
 }
 .footer {
     color: @dark;
-    .fsize(14);
+    .fsize(12);
 }
 .footer__copyright {
     display: inline-block;
@@ -210,7 +210,9 @@ footer {
 }
 .footer__made-by {
     display: inline-block;
+    vertical-align: top;
     margin: 0 0 0 2.5rem;
+    color: @dark;
     a {
         color: @dark;
         text-decoration: none;
@@ -239,7 +241,8 @@ footer {
     display: inline-block;
     .link {
         display: inline-block;
-        margin: 0 0 0 1.5rem;
+        float: left;
+        margin: 0 0 0 1.8rem;
         vertical-align: top;
         width: 1.6rem;
         height: 1.6rem;
@@ -252,6 +255,11 @@ footer {
         }
         &.link--2 {
 
+        }
+        &.link--3 {
+            path {
+                fill: #333;
+            }
         }
         &:hover {
             opacity: 0.7;
@@ -302,7 +310,7 @@ h2 {
     float: right;
     padding-top: 1rem;
     h2 {
-        margin: -4rem 0 2.1rem 0;
+        margin: -5rem 0 2.1rem 0;
         color: #333333;
         font-weight: 700;
         .fsize(18);
@@ -433,15 +441,15 @@ h2 {
 }
 .input-wrap {
     position: relative;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
     &.input-wrap--small-left {
         display: inline-block;
-        width: 47.8%;
+        width: 48.5%;
         float: left;
     }
     &.input-wrap--small-right {
         display: inline-block;
-        width: 47.8%;
+        width: 48.5%;
         float: right;
     }
 }
@@ -741,7 +749,7 @@ h2 {
     }
     .desktop {
         display: block;
-        /*height: 43rem;*/
+        height: 64rem;
     }
     .mobile {
         display: none;
@@ -1238,7 +1246,7 @@ body.lb-disable-scrolling {
 .menu-toggle {
     display: none;
     position: absolute;
-    top: 6.5rem;
+    top: 3.5rem;
     right: 10px;
     width: 3.5rem;
     z-index: 101;
@@ -1394,18 +1402,20 @@ label.error {
             .fsize(16);
             font-weight: 700;
             &:hover {
-                text-decoration: underline;
+                color: @gray;
             }
         }
     }
 }
 .search-not-found {
-    .fsize(16);
+    .fsize(14);
     .title {
         text-transform: uppercase;
         font-weight: 700;
+        .fsize(18);
     }
     > ul {
+        .fsize(13);
         > li {
             margin: 1rem 0;
         }
@@ -1418,7 +1428,7 @@ label.error {
                 text-decoration: none;
                 text-transform: uppercase;
                 &:hover {
-                    text-decoration: underline;
+                    color: @gray;
                 }
             }
             ul {
@@ -1512,7 +1522,9 @@ label.error {
             }
         }
     }
-
+    .header__logo {
+        float: none;
+    }
     .about-content__section {
         margin: 0 0 2.5rem;
     }
@@ -1596,6 +1608,9 @@ label.error {
     }
     .form-title {
         margin: 4rem 0 2rem;
+    }
+    .foot-contacts__links .link {
+        float: none;
     }
 }
 @media (max-width: 480px) {

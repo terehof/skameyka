@@ -15,6 +15,7 @@ jQuery.extend(jQuery.validator.messages, {
 var app = app || {};
 app.events = {
     init: function() {
+        this.scrollCompens();
         this.projectsItems();
         this.projectDescrip();
         this.slider();
@@ -26,6 +27,31 @@ app.events = {
         this.projectCategoriesMenu();
         this.formValidate();
         this.swipe();
+    },
+    scrollCompens: function () {
+        var pageWrapper = $('.main-wrapper');
+        function getScrollWidth(){
+            var measure = $('<div />').css({
+                    width: 100,
+                    height: 100,
+                    overflowY: 'scroll',
+                    visibility: 'hidden'
+                }).appendTo('body'),
+                sw = measure.prop('offsetWidth') - measure.prop('clientWidth');
+            measure.remove();
+            return sw;
+        }
+        function scrollCompensation(){
+            var d = document,
+                rootEl = d.compatMode == 'BackCompat'? d.body : d.documentElement,
+                hasScroll = rootEl.scrollHeight > rootEl.clientHeight,
+                scrollW = getScrollWidth();
+            pageWrapper.css('padding-left', (hasScroll ? scrollW : 0));
+            $('footer').css('padding-left', (hasScroll ? scrollW : 0));
+            return false;
+        }
+        scrollCompensation();
+        $(window).on('resize', scrollCompensation);
     },
     projectsItems: function () {
         var $item = $('.project-item');
@@ -39,9 +65,9 @@ app.events = {
             var $projLeft = $('.project-left');
             if ($projLeft.length > 0) {
                 $projLeft.scrollToFixed({
-                    marginTop: 130,
+                    marginTop: 160,
                     limit: function () {
-                        return $('footer').offset().top - $(this).height();
+                        //return $('footer').offset().top - $(this).height();
                     }
                 });
             }
@@ -221,6 +247,7 @@ $(window).resize(function () {
     app.events.blogImages();
 });
 $(window).load(function () {
+    $(window).resize();
     var $blogWrap = $('.blog-wrapper');
     if ($blogWrap.length > 0 ) {
         $blogWrap.masonry({
