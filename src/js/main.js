@@ -108,6 +108,7 @@ app.events = {
         lightbox.option({
             alwaysShowNavOnTouchDevices: true,
             albumLabel: '%1 из %2',
+            positionFromTop: 0,
             wrapAround: true
         })
     },
