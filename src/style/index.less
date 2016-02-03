@@ -287,7 +287,7 @@ h2 {
     display: inline-block;
     width: 45%;
     float: left;
-    padding-top: 1rem;
+    padding-top: 2.5rem;
 }
 .about-content__section {
     margin: 0 0 5rem;
@@ -309,7 +309,7 @@ h2 {
     float: right;
     padding-top: 1rem;
     h2 {
-        margin: -5rem 0 2.1rem 0;
+        margin: -5rem 0 4.3rem 0;
         color: #333333;
         font-weight: 700;
         .fsize(18);
@@ -390,7 +390,7 @@ h2 {
     display: inline-block;
     width: 46%;
     float: left;
-    margin: 1.5rem 0 0;
+    margin: 1.2rem 0 0;
     p {
         color: @dark;
         .fsize(15);
@@ -459,6 +459,7 @@ h2 {
     box-sizing: border-box;
     border: 1px solid @input-border;
     .fsize(14);
+    resize: none;
     outline: none;
     transition: all 0.25s ease;
     &:focus {
@@ -558,7 +559,7 @@ h2 {
     overflow: hidden;
     width: 102%;
     margin-left: -0.45%;
-    margin-top: 2.2rem;
+    margin-top: 2.4rem;
     text-align: justify;
 }
 .project-item {
@@ -700,6 +701,7 @@ h2 {
 .index-slider {
     position: relative;
     overflow: hidden;
+    padding-top: 0.3rem;
     &:hover {
         .slider-line {
             bottom: 0;
@@ -963,6 +965,7 @@ html[xmlns] .flexslider .slides {
     width: 102.2%;
     margin-left: -1.1%;
     margin-bottom: -2.5rem;
+    padding-top: 2.7rem;
 }
 .blog-item {
     display: inline-block;
@@ -1218,12 +1221,12 @@ body.lb-disable-scrolling {
 .lb-data .lb-close {
     position: fixed;
     top: 5%;
-    right: 6%;
+    right: 5.5%;
     z-index: 11;
     display: block !important;
     float: right;
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
     background: url(../images/decor/cross.svg) top right no-repeat;
     background-size: 100%;
     text-align: right;
@@ -1680,5 +1683,20 @@ label.error {
             float: none;
             width: 100%;
         }
+    }
+}
+
+@media (min-width: 960px) {
+    .contacts-content__right {
+        width: 470px;
+    }
+    .input-wrap {
+        margin-bottom: 10px;
+    }
+    .input-wrap.input-wrap--small-left {
+        width: 230px;
+    }
+    .input-wrap.input-wrap--small-right {
+        width: 230px;
     }
 }
