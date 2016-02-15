@@ -42,7 +42,7 @@ header {
     position: relative;
     z-index: 1001 !important;
     background: @white;
-    border-bottom: 1px solid @header-line;
+    //border-bottom: 1px solid @header-line;
     padding: 2.5rem 0 1.5rem;
     &:before {
         content: '';
@@ -55,6 +55,7 @@ header {
     }
     &:after {
         content: '';
+        display: block;
         position: absolute;
         height: 100%;
         width: 1000%;
@@ -557,7 +558,7 @@ h2 {
 .projects-wrap {
     position: relative;
     overflow: hidden;
-    width: 102%;
+    width: 101.1%;
     margin-left: -0.45%;
     margin-top: 2.4rem;
     text-align: justify;
@@ -969,7 +970,7 @@ html[xmlns] .flexslider .slides {
 }
 .blog-item {
     display: inline-block;
-    width: 48.9%;
+    width: 50%;
     box-sizing: border-box;
     margin-bottom: 5rem;
     padding: 0 1.1%;
