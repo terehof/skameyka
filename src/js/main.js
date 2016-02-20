@@ -105,12 +105,14 @@ app.events = {
         }
     },
     lightbox: function () {
-        lightbox.option({
-            alwaysShowNavOnTouchDevices: true,
-            albumLabel: '%1 из %2',
-            positionFromTop: 0,
-            wrapAround: true
-        })
+        if ( $('[data-lightbox]').length > 0 ) {
+            lightbox.option({
+                alwaysShowNavOnTouchDevices: true,
+                albumLabel: '%1 из %2',
+                positionFromTop: 0,
+                wrapAround: true
+            })
+        }
     },
     disableProjectsLightbox: function () {
         if ($(window).width() < 640) {
