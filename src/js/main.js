@@ -27,6 +27,11 @@ app.events = {
         this.projectCategoriesMenu();
         this.formValidate();
         this.swipe();
+        this.showContent();
+    },
+    showContent: function () {
+        /* добавил появление контента */
+        $('.main-wrapper').addClass('fadeIn');
     },
     scrollCompens: function () {
         var pageWrapper = $('.main-wrapper');
@@ -67,7 +72,7 @@ app.events = {
                 $projLeft.scrollToFixed({
                     marginTop: 160,
                     limit: function () {
-                        //return $('footer').offset().top - $(this).height();
+                        return $('footer').offset().top - $(this).height();
                     }
                 });
             }

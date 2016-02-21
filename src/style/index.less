@@ -11,12 +11,14 @@ body {
     color: @dark;
     .fsize(14);
 }
+/* добавил opacity 0 */
 .main-wrapper {
     box-sizing: border-box;
     min-height: 100%;
     padding-bottom: 14rem;
     min-width: 320px;
     overflow: hidden;
+    opacity: 0;
 }
 .container {
     max-width: 96rem;
@@ -368,6 +370,7 @@ h2 {
         &:first-child {
             margin-left: 0;
         }
+        /* добавил background image*/
         &.soc-1 {
             background-image: url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAAyMjIzMzMyMjIyMjIwMDAyMjIwMDAzMzMwMDAxMTEyMjIyMjIyMjIzMzMAAADWoSRSAAAADnRSTlMA4KCAwBBgQG8wP5/ff4tnLsUAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAPElEQVQI12PgewcGDxjAlJDJOzDjEQMzhPEUxnBgegdlsEAYjxLYIIqfM0DVvJjAuRpVDVGMs3eADJgzAAYeXdXEu6flAAAAAElFTkSuQmCC);
         }
@@ -396,7 +399,6 @@ h2 {
 
     }
 }
-
 .contacts-content__left {
     display: inline-block;
     width: 46%;
@@ -619,6 +621,10 @@ h2 {
     display: inline-block;
     width: 34.5%;
     float: left;
+    /* добавил стиль */
+    + div {
+        float: left !important;
+    }
 }
 .project-right {
     display: inline-block;
@@ -1112,12 +1118,14 @@ body.lb-disable-scrolling {
     text-align: center;
     line-height: 0;
 }
+/* подправил стили */
 .lb-cancel {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 160px;
+    height: 24px;
     margin: 0 auto;
     background: url(../images/decor/loading.gif) no-repeat;
+    background-size: 100% 100%;
 }
 .lb-nav {
     display: block !important;
@@ -1374,11 +1382,12 @@ body.lb-disable-scrolling {
 
 label.error {
     position: absolute;
-    top: 100%;
+    top: 99%;
     left: 0;
     color: red;
     font-weight: 400;
-    .fsize(11);
+    /* чуть уменьшил размер */
+    .fsize(10);
 }
 .preloader {
     display: none;
@@ -1452,6 +1461,11 @@ label.error {
     }
 }
 
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.25s;
+}
 
 @media (max-width: 1000px) {
     .container {
@@ -1701,13 +1715,14 @@ label.error {
     .contacts-content__right {
         width: 470px;
     }
+    /* изменил расстояния */
     .input-wrap {
-        margin-bottom: 10px;
+        margin-bottom: 13px;
     }
     .input-wrap.input-wrap--small-left {
-        width: 230px;
+        width: 228px;
     }
     .input-wrap.input-wrap--small-right {
-        width: 230px;
+        width: 229px;
     }
 }
